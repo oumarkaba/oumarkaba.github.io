@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Sékou-Oumar Kaba</title>
+    <link>http://oumarkaba.github.io/categories/</link>
+    <description>Recent content in Categories on Sékou-Oumar Kaba</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    
+	<atom:link href="http://oumarkaba.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+    <item>
+      <title>Feize, wallpaper and crystallographic groups</title>
+      <link>http://oumarkaba.github.io/feize-wallpaper-and-crystallographic-groups/</link>
+      <pubDate>Tue, 09 Jun 2020 19:30:14 -0400</pubDate>
+      
+      <guid>http://oumarkaba.github.io/feize-wallpaper-and-crystallographic-groups/</guid>
+      <description>&lt;p&gt;L’attracteur de Lorenz est une structure fractale correspondant au comportement à long terme de l&amp;rsquo;oscillateur de Lorenz. L&amp;rsquo;attracteur montre comment les différentes variables du système dynamique évoluent dans le temps en une trajectoire non périodique.&lt;/p&gt;
+&lt;p&gt;En 1963, le météorologue Edward Lorenz est le premier à mettre en évidence le caractère vraisemblablement chaotique de la météorologie. Le modèle de Lorenz, appelé aussi système dynamique de Lorenz ou oscillateur de Lorenz, est une modélisation simplifiée de phénomènes météorologiques basée sur la mécanique des fluides. Ce modèle est un système dynamique tridimensionnel qui engendre un comportement chaotique dans certaines conditions.&lt;/p&gt;
+&lt;p&gt;Le modèle de Lorenz a eu des répercussions importantes en montrant les limites possibles sur la capacité de prédiction à long terme de l&amp;rsquo;évolution climatique et météorologique. C&amp;rsquo;est un élément important de la théorie selon laquelle l&amp;rsquo;atmosphère des planètes et des étoiles peut comporter une grande variété de régimes quasi périodiques et est sujette à des changements abrupts et, en apparence, aléatoires. C&amp;rsquo;est aussi un exemple utile à la théorie des systèmes dynamiques servant de source à de nouveaux concepts mathématiques.&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    
+    
+    
+  </channel>
+</rss>
