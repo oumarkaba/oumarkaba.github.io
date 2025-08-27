@@ -10,26 +10,6 @@
     <title>CS551 McGill</title>
     <link rel="stylesheet" type="text/css" href="./rstyle.css">
     <script src="./jquery-1.11.1.js"> </script>
-    <script>
-        $("dd").hide();
-        $("dt").hide();
-        $('ul').hide();
-        $(document).ready(function (event) {
-            $("h3").click(function (event) {
-                $(this).next().toggle();
-                $(this).toggleClass("clicked");
-            });
-            $("dt").click(function (event) {
-                $(this).next().toggle();
-            });
-            $("dt").next().hide();
-            $('.expand').click(function () { $('ul').show(); });
-            $('.expandall').click(function () { $('ul').show(); $('ul').children().show(); });
-            $('.collapse').click(function () { $('ul').hide(); $('dd').hide(); });
-            // $('.onlinecourses').click(function() {$('ul').show();$('ul').children().show();}
-            // $('ul').show();}$('.onlinecourseslist').show();});
-        });
-    </script>
     <style>
         dt.imp {
             color: #853a31;
