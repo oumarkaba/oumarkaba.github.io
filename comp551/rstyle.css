@@ -8,7 +8,7 @@ body {
 div {
     font-size: 1em;
     margin: 0em;
-    margin: auto;
+    /* margin: auto; */
     background-color: white;
 }
 
@@ -138,11 +138,6 @@ img {
 }
 
 /*https://www.w3schools.com/colors/colors_picker.asp*/
-
-ul {
-    list-style-type: circle;
-    display: none;
-}
 
 h1 {
     color: #1F1F14;
@@ -293,4 +288,122 @@ p.about {
     /* optional: tighter, symmetric margins */
     padding: .2em .1em 1em 0;
     /* remove the left indent that was 2em */
+}
+
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+.main {
+    width: 60em;
+    padding: 1em;
+}
+
+/* --- Collapsible content (scoped so it won't affect other lists) --- */
+#mainn h3+ul {
+    display: none;
+}
+
+/* sections start closed */
+#mainn dt+dd {
+    display: none;
+}
+
+/* details start closed */
+#mainn h3.clicked+ul {
+    display: block;
+}
+
+#mainn dt.open+dd {
+    display: block;
+}
+
+/* --- TOC left rail --- */
+#toc {
+    display: block;
+    padding: .75rem 0 .75rem 1rem;
+    border-left: 3px solid #e6e6e6;
+}
+
+#toc h4 {
+    margin: 0 0 .35rem 0;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+/* Make TOC text a bit bigger + clearer link color */
+#toc {
+    font-size: 1.08rem;
+    line-height: 1.45;
+}
+
+#toc a {
+    color: #1e40af;
+    text-decoration: none;
+    display: block;
+    padding: .15rem 0;
+}
+
+#toc a:hover,
+#toc a.active {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+@media (min-width: 1000px) {
+    body {
+        display: grid;
+        grid-template-columns: 260px 1fr;
+        column-gap: 2rem;
+    }
+
+    #toc {
+        position: sticky;
+        top: 1rem;
+        align-self: start;
+    }
+}
+
+@media (min-width: 1000px) {
+    body {
+        display: grid;
+        grid-template-columns: 260px minmax(0, 1fr);
+        column-gap: 2rem;
+        align-items: start;
+    }
+
+    body>*:not(#toc) {
+        grid-column: 2;
+    }
+
+    /* <— key line */
+    #toc {
+        position: sticky;
+        top: 1rem;
+        align-self: start;
+    }
+}
+
+
+/* collapsibles only inside your main content area */
+#main h3+ul {
+    display: none;
+}
+
+#main dt+dd {
+    display: none;
+}
+
+/* TOC list must always be visible */
+#toc ul {
+    display: block !important;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+.main {
+    margin-inline: auto;
 }
