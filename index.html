@@ -1,47 +1,260 @@
 <!DOCTYPE html>
-<html><head>
-	<meta name="generator" content="Hugo 0.110.0">
+<html lang="en">
+
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Oumar&#39;s Website">
-    
-    <link rel="shortcut icon" href="http://oumarkaba.github.io/favicon.ico">
-    <link rel="alternate" type="application/rss+xml" href="http://oumarkaba.github.io/index.xml" title="Sékou-Oumar Kaba">
-    
-    <link rel="stylesheet" href="/css/style.min.css">
+    <meta name="viewport" content="width=device-width,maximum-scale=1.0">
+    <title>Oumar Kaba — Home</title>
+    <link rel="stylesheet" type="text/css" href="./rstyle.css">
+    <!-- jQuery -->
+    <script src="jquery-1.11.1.js"></script>
 
-    <title>Oumar&#39;s website</title>
+    <style>
+        dt.imp {
+            color: #853a31;
+        }
+
+        li.imp {
+            color: #853a31;
+        }
+
+        h3.inf {
+            color: #476b6b;
+            cursor: pointer;
+        }
+
+        .links a {
+            margin-right: 10px;
+        }
+
+        .subtitle {
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.4;
+        }
+    </style>
 </head>
-<body><header id="banner">
-    <h2><a href="http://oumarkaba.github.io">Sékou-Oumar Kaba</a></h2>
-    <nav>
-        <ul>
-            <li>
-                <a href="/resume/" title="resume">resume</a>
-            </li><li>
-                <a href="/publications/" title="publications">publications</a>
-            </li>
-        </ul>
+
+<body>
+    <nav id="toc">
+        <h4>On this page</h4>
+        <ul></ul>
     </nav>
-</header>
-<main id="content">
-<div class="container">
-    <p><img src="/images/avatar.jpeg"
-alt="Markdown Monster icon"
-style="display: block; margin-left: auto; margin-right: auto;width: 40%; height: auto; margin-top:40px; margin-bottom:40px; border: 5px solid #555;" /></p>
-<p>My name is <strong>Sékou-Oumar Kaba</strong>, I am a graduate student in machine learning at McGill University and Mila.</p>
-<p>I have a background in physics and my research focuses on designing deep learning models that leverage structure and symmetry in data, primarily for applications in physics (with a focus on materials).</p>
-<p>My interests also include <em>geometric deep learning</em>, <em>graph representation learning</em>, <em>statistical mechanics</em> and <em>dynamical systems</em>.</p>
-<h4 id="contact-and-social-media">Contact and social media</h4>
-<p><a href="mailto:kabaseko@mila.quebec">Email</a> <br>
-<a href="https://twitter.com/sekoumarkaba">Twitter</a> <br>
-<a href="https://www.linkedin.com/in/oumar-kaba/">Linkedin</a> <br>
-<a href="https://scholar.google.ca/citations?user=jKqh8jAAAAAJ&amp;hl=fr">Scholar</a></p>
 
-</div>
 
-        </main><footer id="footer">
-    Last updated: October 2024. Copyright © 2024 Sékou-Oumar Kaba
-</footer>
+    <div id="main" class="main">
+        <div class="title">
+            <img class="logo" src="./avatar_2.jpg" alt="Portrait of Oumar Kaba">
+            <h1>Sékou-Oumar Kaba</h1>
+            <div class="subtitle">
+                Ph.D. Candidate, Computer Science <br>
+                <a href="https://www.mcgill.ca/">McGill University</a> & <a href="https://mila.quebec/">Mila – Quebec AI
+                    Institute</a><br>
+                Montréal, Canada
+            </div>
+            <small>
+                Email: sekou.oumar.kaba [at] gmail.com &nbsp;|&nbsp;
+                <a href="https://scholar.google.com/citations?user=jKqh8jAAAAAJ" target="_blank"> Scholar</a>
+                &nbsp;|&nbsp;
+                <a href="https://x.com/sekoumarkaba" target="_blank">Twitter</a> &nbsp;|&nbsp;
+                <a href="https://www.linkedin.com/in/oumar-kaba" target="_blank">LinkedIn</a> &nbsp;|&nbsp;
+                <a href="https://github.com/oumarkaba" target="_blank">GitHub</a>
+            </small>
+            <br><br>
+            <p class="about">
+                My name is Sékou-Oumar Kaba (he/him, most people call me
+                Oumar). <span style="white-space:nowrap;"></span>
+                I am a Ph.D. candidate in Computer Science at McGill University and Mila, supervised by Prof. Siamak
+                Ravanbakhsh.<br><br>
+                I work on geometric deep learning and generative models for scientific discovery, with a focus on
+                symmetry, equivariance, and AI for materials and molecular systems.
+
+                Some of my recent projects span
+                crystal generation, symmetry breaking with equivariant networks,
+                energy-based losses for physical systems and equivariant adaptation of large pretrained models. My
+                interests also include graph learning and statistical physics.<br><br>
+
+                I previously did an internship at
+                Microsoft Research Amsterdam working on machine learning for electronic structure. Before starting my
+                Ph.D., I completed an M.Sc. in theoretical condensed matter physics working with
+                Prof.
+                David Sénéchal and did an internship in Prof. Yoshua Bengio's group at Mila.
+            </p>
+        </div>
+
+        <div id="mainn" class="description">
+            <h4 class="expand">[expand]</h4>
+            <h4 class="expandall">[expand all]</h4>
+            <h4 class="collapse">[collapse all]</h4>
+
+            <!-- Publications (selected) -->
+            <h3 id="pubs" class="inf">Selected Publications</h3>
+            <ul>
+                <dt class="default"><b>Conference papers</b></dt>
+                <dd>
+                    <li><b>Improving Equivariant Networks with Probabilistic Symmetry Breaking</b> (ICLR 2025).
+                        <a href="https://arxiv.org/abs/2502.03638" target="_blank">arXiv</a>
+                    </li>
+                    <li><b>SymmCD: Symmetry-preserving Crystal Generation with Diffusion Models</b> (ICLR 2025).
+                        <a href="https://arxiv.org/abs/2310.01647" target="_blank">arXiv</a>
+                    </li>
+                    <li><b>On the Identifiability of Causal Abstractions</b> (AISTATS 2025).
+                        <a href="https://arxiv.org/abs/2211.15420" target="_blank">arXiv</a>
+                    </li>
+                    <li><b>Equivariant Adaptation of Large Pre-trained Models</b> (NeurIPS 2023).
+                        <a href="https://arxiv.org/abs/2310.01647" target="_blank">arXiv</a>
+                    </li>
+                    <li><b>Equivariance with Learned Canonicalization Functions</b> (ICML 2023).
+                        <a href="https://arxiv.org/abs/2211.06489" target="_blank">arXiv</a>
+                    </li>
+                    <li><b>Equivariant Networks for Crystal Structures</b> (NeurIPS 2022).
+                        <a href="https://arxiv.org/abs/2011.09468" target="_blank">arXiv</a>
+                    </li>
+                </dd>
+
+                <dt class="default"><b>Journal articles</b></dt>
+                <dd>
+                    <li><b>Prediction of Large Magnetic Moment Materials with Graph Neural Networks and Random
+                            Forests</b>,
+                        <i>Phys. Rev. Materials</i>, 2023.
+                        <a href="https://journals.aps.org/prmaterials/abstract/10.1103/PhysRevMaterials.7.044407"
+                            target="_blank">journal</a>
+                    </li>
+                    <li><b>Group-theoretical Classification of Superconducting States of
+                            Strontium Ruthenate</b>,
+                        <i>Phys. Rev. B</i>, 2019.
+                        <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.100.214507"
+                            target="_blank">journal</a>
+                    </li>
+                </dd>
+
+                <dt class="default"><b>Preprints</b></dt>
+                <dd>
+                    <li><b>Accurate and Scalable Exchange-Correlation with Deep Learning</b>, 2025.
+                        <a href="https://arxiv.org/abs/2506.14665" target="_blank">arXiv</a>
+                    </li>
+                </dd>
+
+                <dt><i><a href="https://scholar.google.com/citations?user=jKqh8jAAAAAJ" target="_blank">Full list on
+                            Google Scholar</a></i></dt>
+            </ul>
+
+            <!-- Teaching -->
+            <h3 id="teaching" class="inf">Teaching</h3>
+            <ul>
+                <dt class="default"><b>COMP 551 — Applied Machine Learning (Fall 2025)</b></dt>
+                <dd>
+                    <li>Co-instructor with Prof. <a href="https://www.reirab.com/" target="_blank">Reihaneh
+                            Rabbany.</a></li>
+                    <li><a href="./comp551/comp551.html" target="_blank">Course website:</a>Syllabus, and
+                        materials will be posted here as they become available. Assignments and quizzes are available on
+                        MyCourses.</li>
+                </dd>
+            </ul>
+
+            <!-- Software -->
+            <h3 id="software" class="inf">Software</h3>
+            <ul>
+                <li><b>EquiAdapt</b> — Equivariant adaptation of neural networks.
+                    <a href="https://equiadapt.readthedocs.io/en/latest/?badge=latest" target="_blank">docs</a>
+                </li>
+                <li><b>Equivariant Networks for Crystal Structures</b> — reference implementations.
+                    <a href="https://github.com/oumarkaba/equivariant_crystal_networks" target="_blank">code</a>
+                </li>
+            </ul>
+
+            <!-- Short bio -->
+            <h3 id="bio" class="inf">Short bio</h3>
+            <ul>
+                <li>
+                    I am a Ph.D. candidate in Computer Science at McGill and Mila, supervised by Prof. Siamak
+                    Ravanbakhsh.
+                    My research focuses on geometric deep learning and generative modeling for molecules, crystals, and
+                    materials.
+                    I came to this field from physics, having completed an M.Sc. at Université de Sherbrooke and a B.Sc.
+                    at Université Laval.
+                    Along the way, I interned at Mila with Yoshua Bengio and at Microsoft Research Amsterdam, working on
+                    machine learning for materials and quantum chemistry.
+                    Beyond research, I care deeply about science outreach and communication. I have for example hosted
+                    a radio show on scientific and social innovation, and I continue to seek opportunities to
+                    make scientific ideas
+                    accessible and inspiring to a broader audience.<br><br>
+                    <a href="./cv.pdf" target="_blank">Link to CV (PDF)</a>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="footer">
+            <b>Contact:</b> sekou.oumar.kaba [at] gmail.com
+            <p align="right">
+                <span style="color:#d1e0e0;"><small>
+                        Last Modified:
+                        <script>
+                            if (Date.parse(document.lastModified)) {
+                                document.write(new Date(document.lastModified).toLocaleDateString("en-US"));
+                            }
+                        </script>
+                    </small></span>
+            </p>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            const $root = $('#mainn');          // content column
+            const $toc = $('#toc ul').empty(); // left TOC list
+
+            // --- Build TOC from H3s ---
+            $root.find('h3').each(function () {
+                const $h = $(this);
+                if (!$h.attr('id')) {
+                    $h.attr('id', $h.text().trim().toLowerCase().replace(/[^a-z0-9]+/g, '-'));
+                }
+                $('<li>').append($('<a>', { href: '#' + $h.attr('id'), text: $h.text() })).appendTo($toc);
+            });
+
+            // --- Start state ---
+            $root.find('dd').hide(); // hide dd initially; h3+ul is hidden via CSS
+
+            // --- Per-section toggles ---
+            // H3 toggles its following UL via CSS class
+            $root.on('click', 'h3', function () {
+                $(this).toggleClass('clicked');
+            });
+
+            // DT toggles its first following DD robustly
+            $root.on('click', 'dt', function () {
+                const $dd = $(this).nextAll('dd').first();
+                $dd.toggle();
+                $(this).toggleClass('open', $dd.is(':visible'));
+            });
+
+            // --- Global controls ---
+            $('.expand').on('click', () => $root.find('h3').addClass('clicked'));
+            $('.expandall').on('click', () => { $root.find('h3').addClass('clicked'); $root.find('dd').show(); });
+            $('.collapse').on('click', () => { $root.find('h3').removeClass('clicked'); $root.find('dd').hide(); });
+
+            // --- TOC clicks: open section and scroll to it ---
+            $('#toc').on('click', 'a', function (e) {
+                e.preventDefault();
+                const id = this.getAttribute('href');   // e.g., "#teaching"
+                const $h = $(id);
+                if (!$h.length) return;
+
+                // ensure the section is expanded
+                $h.addClass('clicked');
+
+                // optional: highlight active TOC link
+                $('#toc a').removeClass('active');
+                $(this).addClass('active');
+
+                // smooth scroll (tweak offset if you want a little top padding)
+                $('html, body').animate({ scrollTop: $h.offset().top - 10 }, 200);
+            });
+
+        });
+    </script>
+
 </body>
+
 </html>

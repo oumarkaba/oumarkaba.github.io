@@ -1,0 +1,296 @@
+/*******************************  OUTLINE *******************************/
+body {
+    font-family: "Georgia", Georgia, serif;
+    text-align: justify;
+    margin: 0px;
+}
+
+div {
+    font-size: 1em;
+    margin: 0em;
+    margin: auto;
+    background-color: white;
+}
+
+.main {
+    width: 60em;
+    padding: 1em 1em 1em 1em;
+}
+
+.affs {
+    width: 50em;
+    /*align: right;*/
+    position: relative;
+    left: 0;
+    top: 0 padding:1em 1em 1em 1em;
+}
+
+.header {
+    margin: .0em .0em 2em .0em;
+
+    border: #99B2CC solid;
+    border-width: .0em .0em .0em .0em;
+    /*background-color:#E9EFF4;/*EEEEEE;*/
+    height: 1em;
+}
+
+.title {
+    padding: 1em 3em 1em 2em;
+    font-size: 1.1em;
+}
+
+.description {}
+
+.code {
+    color: #333333;
+    margin: 1em;
+    border: #999999 solid;
+    border-width: .1em;
+    padding: .5em;
+    font-family: "Courier New";
+    font-size: .9em;
+}
+
+.footer {
+    border: #D3D3D3 solid;
+    border-width: .05em .0em .0em .0em;
+    padding: 1em;
+    font-size: .9em;
+    /*background-image:url('header2.png');*/
+
+}
+
+.togli {
+    display: none;
+}
+
+li {
+    padding-left: 0em;
+    padding-top: .1em;
+}
+
+p.about {
+    padding: .2em .1em 1em 2em;
+    margin: .2em .1em .2em .1em;
+    border: #3b68b1 solid;
+    border-width: .0em .0em .0em .0em;
+}
+
+/*******************************  IMAGES *******************************/
+img {
+    margin: .1em .5em .1em .3em;
+}
+
+.linklogo {
+    height: 2em;
+    float: left;
+}
+
+.smalllogo {
+    width: 5em;
+    float: left;
+    margin: 0em 1em 1em 1em;
+}
+
+.logo {
+    position: relative;
+    width: 11em;
+    float: left;
+    margin: 0em 2em 0em 0em;
+}
+
+.logoaff1 {
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10em;
+    margin: 2em 2em 2em 2em;
+}
+
+.logoaff2 {
+    float: right;
+    position: absolute;
+    top: 3em;
+    right: 0;
+    width: 10em;
+    margin: 2em 2em 2em 2em;
+}
+
+.largelogo {
+    width: 25em;
+    float: center;
+    margin: .2em .2em .2em .2em;
+}
+
+.eg {
+    width: 20em;
+    border: #999999 solid;
+    border-width: .1em;
+    margin: .5em .5em;
+}
+
+.eglarge {
+    width: 30em;
+    border: #999999 solid;
+    border-width: .1em;
+    margin: .5em .5em;
+}
+
+/*https://www.w3schools.com/colors/colors_picker.asp*/
+
+ul {
+    list-style-type: circle;
+    display: none;
+}
+
+h1 {
+    color: #1F1F14;
+    font-size: 1.3em;
+}
+
+h2 {
+    color: #4C4C43;
+    font-size: 1.2em;
+}
+
+h3 {
+    color: #000000;
+    font-size: 1.2em;
+}
+
+h4 {
+    color: #bfbfbf;
+    font-size: .6em;
+    display: inline;
+    background-color: #f0f0f5;
+}
+
+dt {
+    color: #4C4C43;
+    font-size: 1.1em;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+h3,
+h4,
+dt {
+    cursor: pointer;
+}
+
+h3:hover {
+    color: #3385ff;
+}
+
+dt:hover {
+    color: #3385ff;
+}
+
+h4:hover {
+    color: #3385ff;
+}
+
+/*******************************  LINKS *******************************/
+a {
+    text-decoration: none
+}
+
+a:link {
+    color: #003380
+}
+
+/* unvisited link */
+a:visited {
+    color: #001f4d
+}
+
+/*663399}  /* visited link */
+a:hover {
+    color: #3385ff
+}
+
+/* mouse over link */
+
+/*a[href$='.pdf']*/
+a[href*='Papers'] {
+    display: inline-block;
+    line-height: 1em;
+    padding-left: 1.5em;
+    background: transparent url(logos/pdf2.png) center left no-repeat;
+}
+
+a[href*='Presentations'] {
+    display: inline-block;
+    line-height: 1em;
+    padding-left: 1.5em;
+    background: transparent url(logos/ppt2.png) center left no-repeat;
+}
+
+a[href*='presentation'] {
+    display: inline-block;
+    line-height: 1em;
+    padding-left: 1.5em;
+    background: transparent url(logos/ppt2.png) center left no-repeat;
+}
+
+a[href$='.bib'] {
+    display: inline-block;
+    line-height: 1.5em;
+    padding-left: 1em;
+    background: transparent url(logos/bibtex.png) center left no-repeat;
+}
+
+a[href$='.jar'] {
+    display: inline-block;
+    line-height: 1.2em;
+    padding-right: 1.5em;
+    background: transparent url(logos/jar.png) center right no-repeat;
+}
+
+a[href$='.zip'] {
+    display: inline-block;
+    line-height: 1.2em;
+    padding-right: 1.5em;
+    background: transparent url(logos/zip.png) center right no-repeat;
+}
+
+a[target="_blank"] {
+    /*external link*/
+    display: inline-block;
+    line-height: 1.5em;
+    padding-right: 1em;
+    background: transparent url(logos/link2.png) center right no-repeat;
+}
+
+a.folder {
+    display: inline-block;
+    line-height: 1.5em;
+    padding-right: 1.3em;
+    background: transparent url(logos/folder.png) center right no-repeat;
+}
+
+a.home {
+    display: inline-block;
+    line-height: 1.5em;
+    padding-left: 3em;
+    background: transparent url(logos/home.png) center left no-repeat;
+}
+
+/* give the image some breathing room */
+.logo {
+    float: left;
+    width: 11em;
+    margin: 0 2em .75em 0;
+    /* right & bottom gap */
+}
+
+/* force the intro paragraph to start below the floated image */
+p.about {
+    clear: both;
+    /* <— key line */
+    margin: 1em 0 .5em 0;
+    /* optional: tighter, symmetric margins */
+    padding: .2em .1em 1em 0;
+    /* remove the left indent that was 2em */
+}

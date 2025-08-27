@@ -1,0 +1,810 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0048)https://www.reirab.com/Teaching/AML23/index.html -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+
+
+    <title>CS551 McGill</title>
+    <link rel="stylesheet" type="text/css" href="./rstyle.css">
+    <script src="./jquery-1.11.1.js"> </script>
+    <script>
+        $("dd").hide();
+        $("dt").hide();
+        $('ul').hide();
+        $(document).ready(function (event) {
+            $("h3").click(function (event) {
+                $(this).next().toggle();
+                $(this).toggleClass("clicked");
+            });
+            $("dt").click(function (event) {
+                $(this).next().toggle();
+            });
+            $("dt").next().hide();
+            $('.expand').click(function () { $('ul').show(); });
+            $('.expandall').click(function () { $('ul').show(); $('ul').children().show(); });
+            $('.collapse').click(function () { $('ul').hide(); $('dd').hide(); });
+            // $('.onlinecourses').click(function() {$('ul').show();$('ul').children().show();}
+            // $('ul').show();}$('.onlinecourseslist').show();});
+        });
+    </script>
+    <style>
+        dt.imp {
+            color: #853a31;
+        }
+
+        li.imp {
+            color: #853a31;
+        }
+
+        h3.inf {
+            color: #476b6b;
+        }
+    </style>
+</head>
+
+<body data-gr-c-s-loaded="true">
+    <div class="header" style="width:100%;height:0%">
+        <br>
+        <br>
+
+    </div>
+    <div id="main" class="main">
+        <div class="title">
+            <img style="width:4em;float:left;margin:1em 1.2em 0em 1em;" src="./logo.jpg" alt="decorative logo">
+            <h1>COMP 551: Applied Machine Learning - Fall 2025</h1>
+            Contact: <b>TBD</b><br>
+            <small style="color:#853a31">please make sure to use this email to receive a timely response</small><br><br>
+            <dt class="guid"><small style="color:#d1e0e0"><b> Class Times &amp; Location </b></small></dt>
+            <ul style="display: none;">
+                <li>Aug 27, 2025 - Dec 3, 2025</li>
+                <li>Monday &amp; Wednesday, 2:00 pm - 3:30 pm </li>
+                <li>TBD<small> [lectures will be recorded]</small> </li>
+            </ul>
+
+            <!-- Winter 2022 -->
+            <!-- ,  <a href="https://mycourses2.mcgill.ca/"> delivered though McGill's MyCourses </a> <br/><br/> -->
+            <!-- </dd><br/> -->
+            <dt class="guid"><small> <b>Teaching Team</b></small></dt>
+            <ul style="display: none;">
+                <li>Instructor: <a href="https://www.reirab.com/"> Reihaneh Rabbany</a></li>
+                <li>Instructor: <a href="https://oumarkaba.github.io/">S&eacute;kou-Oumar Kaba</a></li>
+                <li>HEAD TA: TBD</li>
+                <li>TA: Mohamad Hosein Danesh</li>
+                <li>TA: Charlotte Volk</li>
+                <li>TA: Sebastian Sabry</li>
+                <li>TA: Rafid Saif</li>
+                <li>TA: Alireza Farashah</li>
+                <li>TA: Zahra Tehraninasab</li>
+                <li>TA: TBD</li>
+            </ul>
+
+            </ul>
+
+
+
+
+        </div>
+        <!-- <small class='expand' style="color:#d1e0e0"> Click here to expand all nested fields </small> -->
+        <h4 class="expand">[expand]</h4>
+        <h4 class="expandall">[expand all]</h4>
+        <h4 class="collapse">[collapse all]</h4>
+        <h3 class="overview">Overview</h3>
+        <ul>
+            This course is a mathematically-grounded intro to the fundamentals of machine learning. By the
+            end of the term you will be able to (i) explain the assumptions and math behind common ML models,
+            (ii) choose and justify an approach for a new problem, and (iii) implement, evaluate, and debug models on
+            real data.
+            We cover supervised learning (regression, trees, neural networks), basics of unsupervised learning
+            (clustering, PCA),
+            generalization and model selection, regularization, and gradient-based optimization. We're committed to
+            inclusive learning, please reach out if we can do anything to support you.
+            <dt class="overview"><b>Prerequisites</b> <small style="color:#d1e0e0">[click to expand]</small></dt>
+            <dd>Solid Python, plus comfort with linear algebra, calculus, and probability. If you'd like a quick
+                self-check,
+                see the short prerequisites quiz linked on MyCourses.</dd>
+        </ul>
+
+        <h3 class="guid">Practical advice for students</h3>
+        <ul>
+            <dt><b>Time & pace</b></dt>
+            <dd>Plan steady weekly time for quizzes, lectures, and your project team. Consistency beats cramming and is
+                the best way to succeed this class.</dd>
+
+            <dt><b>Math refresh</b></dt>
+            <dd>The class is math-heavy. Consider refreshing your mind on mathematical notations (like index notation),
+                and basic optimization "by hand"
+                (e.g., when functions reach a max/min).
+                A quick review at the beginning will make later weeks much smoother. Youtube is a great resource for
+                that.
+                <li> <a href="https://www.youtube.com/watch?v=QFzdXUNTi0k">Linear algebra notation video </a>
+                </li>
+                <li> <a href="https://www.youtube.com/watch?v=WCq3sRzsJfs">Optimization review video </a>
+                </li>
+            </dd>
+
+            <dt><b>Effective code debugging</b></dt>
+            <dd>Coding assignments are an important part of the class. If you're stuck, switch to your IDE
+                debugger and step line-by-line; use conditional
+                breakpoints for issues like NaNs.
+                It's faster than sprinkling print statements.</dd>
+
+            <dt><b>Group workflow</b></dt>
+            <dd>Everyone should understand every part of the assignment and gets the same mark. Feel free to divide and
+                conquer, but review together. Discussion with other teams (the Ed platform is here for that) is highly
+                encouraged.</dd>
+
+            <dt><b>Course logistics</b></dt>
+            <dd>Don't miss quiz windows; they are easy points. Register groups on time each assignment if required by
+                your
+                section's rules.</dd>
+        </ul>
+
+        <h3 class="gu">Textbooks</h3>
+        <ul>
+            <li> [Bishop] <a
+                    href="http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf">Pattern
+                    Recognition and Machine Learning </a><i> by Christopher Bishop (2007) </i>
+            </li>
+            <li> [Goodfellow] <a href="http://www.deeplearningbook.org/"> Deep Learning </a> <i> by Ian Goodfellow,
+                    Yoshua Bengio, and Aaron Courville (2016) </i>
+            </li>
+            <li>[Murphy] <a href="https://ebookcentral.proquest.com/lib/mcgill/detail.action?docID=3339490"> Machine
+                    Learning: A Probabilistic Perspective</a> <i> by Kevin Murphy (2012) </i></li>
+            <li>[Murphy'22] <a href="https://probml.github.io/pml-book/book1.html"> Probabilistic Machine Learning: An
+                    Introduction</a>, by Kevin P. Murphy (2022)</li>
+            <dt> Chapters from these four books are cited as <b>optional</b> reference materials for the slides.
+                <br>There are several other related references. <small style="color:#d1e0e0">[click to expand the list]
+                </small>
+            </dt>
+            <dd style="display: none;">
+                <li><a href="https://web.stanford.edu/~hastie/ElemStatLearn/"> The Elements of Statistical Learning:
+                        Data Mining, Inference, and Prediction </a> by Trevor Hastie, Robert Tibshirani and Jerome
+                    Friedman (2009) </li>
+                <li><a href="http://www.inference.org.uk/mackay/itila/">Information Theory, Inference, and Learning
+                        Algorithms</a>, by David MacKay (2003) </li>
+                <li><a href="http://web4.cs.ucl.ac.uk/staff/D.Barber/pmwiki/pmwiki.php?n=Brml.Online"> Bayesian
+                        Reasoning and Machine Learning</a>, by David Barber (2012). </li>
+                <li><a href="http://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/copy.html"> Understanding
+                        Machine Learning: From Theory to Algorithms</a>, by Shai Shalev-Shwartz and Shai Ben-David
+                    (2014)</li>
+                <li><a href="https://cs.nyu.edu/~mohri/mlbook/"> Foundations of Machine Learning</a>, by Mehryar Mohri,
+                    Afshin Rostamizadeh, and Ameet Talwalkar (2018)</li>
+                <li><a href="http://d2l.ai/"> Dive into Deep Learning</a>, by Aston Zhang, Zachary Lipton, Mu Li, and
+                    Alexander J. Smola (2019) </li>
+                <li><a href="https://mml-book.github.io/"> Mathematics for Machine Learning</a>, by Marc Peter
+                    Deisenroth, A Aldo Faisal, and Cheng Soon Ong (2019) </li>
+                <li><a href="http://ciml.info/"> A Course in Machine Learning</a>, by Hal Daume III (2017) </li>
+                <li><a href="https://github.com/ageron/handson-ml"> Hands-on Machine Learning with Scikit-Learn and
+                        TensorFlow</a>, by Aurelien Geron (2017) </li>
+                <li><a href="http://www.cs.cmu.edu/~tom/mlbook.html"> Machine Learning</a>, by Tom Mitchell (1997) </li>
+                <li><a href="https://www-users.cs.umn.edu/~kumar001/dmbook/index.php"> Introduction to Data Mining</a>,
+                    by Pang-Ning Tan, Michael Steinbach, Anuj Karpatne, and Vipin Kumar (2020) </li>
+                <li><a href="http://databookuw.com/"> Machine Learning, Dynamical Systems and Control</a>, by Steven L.
+                    Brunton and J. Nathan Kutz (2019)</li>
+            </dd>
+        </ul>
+
+        <h3>Schedule</h3><!--http://wcaleb.rice.edu/syllabusmaker/generic/-->
+        <ul>
+            <dt>Wed., Aug. 27</dt>
+            <dd style="display: none;"><a href="https://www.reirab.com/Teaching/AML23/0_syllabus.pdf">Syllabus</a></dd>
+
+            <dt><strike>Mon., Sept. 1</strike></dt>
+            <dd style="display: none;"><small>Note: Labour day, No class</small></dd>
+            <dt>Wed., Sept. 3</dt>
+            <dd style="display: none;"></dd>
+
+            <dt>Mon., Sept. 8</dt>
+            <dd style="display: none;"><small>Note: Add/Drop deadline</small></dd>
+            <dt>Wed., Sept. 10</dt>
+            <dd style="display: none;"></dd>
+
+            <dt>Mon., Sept. 15</dt>
+            <dd style="display: none;"></dd>
+            <dt>Wed., Sept. 17</dt>
+            <dd style="display: none;"></dd>
+
+            <dt>Mon., Sept. 22</dt>
+            <dd style="display: none;"></dd>
+            <dt>Wed., Sept. 24</dt>
+            <dd style="display: none;"></dd>
+
+            <dt>Mon., Sept. 29</dt>
+            <dd style="display: none;"></dd>
+            <dt>Wed., Oct. 1</dt>
+            <dd style="display: none;"></dd>
+
+            <dt style="color:#853a31">Mon., Oct. 6</dt>
+            <dd style="display: none;">Midterm Exam 1</dd>
+            <dt>Wed., Oct. 8</dt>
+            <dd style="display: none;"></dd>
+
+            <dt><strike>Mon., Oct. 13</strike></dt>
+            <dd style="display: none;"><small>Note: Reading week, No class</small></dd>
+            <dt><strike>Wed., Oct. 15</strike></dt>
+            <dd style="display: none;"><small>Note: Reading week, No class</small></dd>
+
+            <dt>Mon., Oct. 20</dt>
+            <dd style="display: none;"></dd>
+            <dt>Wed., Oct. 22</dt>
+            <dd style="display: none;"></dd>
+
+            <dt>Mon., Oct. 27</dt>
+            <dd style="display: none;"></dd>
+            <dt>Wed., Oct. 29</dt>
+            <dd style="display: none;"></dd>
+
+            <dt>Mon., Nov. 3</dt>
+            <dd style="display: none;"></dd>
+            <dt>Wed., Nov. 5</dt>
+            <dd style="display: none;"></dd>
+
+            <dt>Wed., Nov. 10</dt>
+            <dd style="display: none;"></dd>
+            <dt style="color:#853a31">Mon., Nov. 12</dt>
+            <dd style="display: none;">Midterm Exam 2</dd>
+
+            <dt>Mon., Nov. 17</dt>
+            <dd style="display: none;"></dd>
+            <dt>Wed., Nov. 19</dt>
+            <dd style="display: none;"></dd>
+
+            <dt>Mon., Nov. 24</dt>
+            <dd style="display: none;"></dd>
+            <dt>Wed., Nov. 26</dt>
+            <dd style="display: none;"></dd>
+
+            <dt>Mon., Dec. 1</dt>
+            <dd style="display: none;"></dd>
+            <dt>Wed., Dec. 3</dt>
+            <dd style="display: none;"></dd>
+        </ul>
+
+        <!-- <dt>Thu., Jan. 6</dt><dd style="display: none;"><a href="http://www.reirab.com/Teaching/AML22/0-syllabus.pdf">Syllabus</a></dd>
+			<dt>Tue., Jan. 11</dt><dd style="display: none;">Introduction</dd>
+			<dt>Thu., Jan. 13</dt><dd style="display: none;">Nearest Neighbours</dd>
+			<dt>Tue., Jan. 18</dt><dd style="display: none;">Classification and regression trees up to slide 20<br/><small>Note: <a href="https://www.mcgill.ca/importantdates/key-dates#Winter_2021"> Add/Drop deadline</a></small></dd>
+			<dt>Thu., Jan. 20</dt><dd style="display: none;">Classification and regression trees cont., Core concepts</dd>
+			<dt>Tue., Jan. 25</dt><dd style="display: none;"></dd>
+			<dt>Thu., Jan. 27</dt><dd style="display: none;"></dd>
+			<dt>Tue., Feb. 1</dt><dd style="display: none;"></dd>
+			<dt>Thu., Feb. 3</dt><dd style="display: none;"></dd>
+			<dt>Tue., Feb. 8</dt><dd style="display: none;"></dd>
+			<dt>Thu., Feb. 10</dt><dd style="display: none;"></dd>
+			<dt>Tue., Feb. 15</dt><dd style="display: none;"></dd>
+			<dt>Thu., Feb. 17</dt><dd style="display: none;"></dd>
+			<dt>Tue., Feb. 22</dt><dd style="display: none;"></dd>
+			<dt>Thu., Feb. 24</dt><dd style="display: none;"></dd>
+			<dt><strike>Tue., Mar. 1</strike></dt><dd style="display: none;"><small>Note: Study break, No class [no quiz], <a href="https://www.mcgill.ca/importantdates/key-dates#Winter_2022">see McGill's Academic calendar</a></small></dd>
+			<dt><strike>Thu., Mar. 3</strike></dt><dd style="display: none;"><small>Note: Study break, No class [no quiz], <a href="https://www.mcgill.ca/importantdates/key-dates#Winter_2022">see McGill's Academic calendar</a></small></dd>
+			<dt>Tue., Mar. 8</dt><dd style="display: none;"></dd>
+			<dt>Thu., Mar. 10</dt><dd style="display: none;"></dd>
+			<dt>Tue., Mar. 15</dt><dd style="display: none;"></dd>
+			<dt>Thu., Mar. 17</dt><dd style="display: none;"></dd>
+			<dt>Tue., Mar. 22</dt><dd style="display: none;"></dd>
+			<dt>Thu., Mar. 24</dt><dd style="display: none;"></dd>
+			<dt>Tue., Mar. 29</dt><dd style="display: none;"></dd>
+			<dt>Thu., Mar. 31</dt><dd style="display: none;"></dd>
+			<dt>Tue., Apr. 5</dt><dd style="display: none;"></dd>
+			<dt>Thu., Apr. 7</dt><dd style="display: none;"></dd>
+			<dt>Tue., Apr. 12</dt><dd style="display: none;"></dd> -->
+
+
+        <h3 class="inf">Outline</h3>
+        <ul>
+            <!-- <dt style="color:#853a31">*** quick note ***</dt> <dd><small>Please note that this list of topics is tentative and copied from the last year's offering of the same course, we might add/drop some topics or change the order as the course progresses.  -->
+            <!-- 	The slides will be posted here right after the corresponding lecture or sooner when possible. All the course materials (slides, codes, etc.) are adapted based on the last year's offering of the same course by Prof. Siamak Ravanbakhsh.  <a href= 'https://www.siamak.page/courses/COMP551F20/index.html'>You can look ahead into the materials, by checking that outline here</a>. -->
+
+            <dt>Introduction</dt>
+            <dd style="display: none;"><a href="https://www.reirab.com/Teaching/AML23/1-introduction.pdf">slides</a>,
+                <small>reference: 1 [Murphy22]</small>
+            </dd>
+            <dt>Parameter Estimation</dt>
+            <dd style="display: none;">
+                <a href="https://www.reirab.com/Teaching/AML23/2-maximumLikelihood.pdf">slides</a>,
+                <a
+                    href="https://github.com/rabbanyk/comp551-notebooks/blob/master/MLE_BayesianInference.ipynb">notebook</a>
+                (<a
+                    href="https://colab.research.google.com/github/rabbanyk/comp551-notebooks/blob/master/MLE_BayesianInference.ipynb">Colab</a>),
+                <small>reference: 4 [Murphy22], 2-2.3 [Bishop], 3-3.5 [Murphy]</small>
+            </dd>
+            <dt>Linear regression</dt>
+            <dd style="display: none;">
+                <a href="https://www.reirab.com/Teaching/AML23/3-linearRegression.pdf">slides</a>,
+                <a href="https://github.com/rabbanyk/comp551-notebooks/blob/master/LinearRegression.ipynb">notebook</a>
+                (<a
+                    href="https://colab.research.google.com/github/rabbanyk/comp551-notebooks/blob/master/LinearRegression.ipynb">Colab</a>),
+                <small>reference: 7-7.3.3 [Murphy], 3-3.1.2 [Bishop]</small>
+            </dd>
+
+            <dt>Logistic and softmax regression</dt>
+            <dd style="display: none;">
+                <a href="https://www.reirab.com/Teaching/AML23/4-logisticRegression.pdf">slides</a>,
+                <a
+                    href="https://github.com/rabbanyk/comp551-notebooks/blob/master/LogisticRegression.ipynb">notebook</a>
+                (<a
+                    href="https://colab.research.google.com/drive/16_r1lKvqffO0V7GgatRhHYC5GOhk-yHt?usp=sharing">Colab</a>),
+                <small>reference: 8.1-8.3.3 [Murphy], 4.1-4.1.3 + 4.3-4.3.3 [Bishop]</small>
+            </dd>
+            <dt>Gradient descent methods</dt>
+            <dd style="display: none;">
+                <a href="https://www.reirab.com/Teaching/AML23/5-gradientdescent.pdf">slides</a>,
+                <a href="https://github.com/rabbanyk/comp551-notebooks/blob/master/GradientDescent.ipynb">notebook</a>
+                (<a
+                    href="https://colab.research.google.com/drive/1dCmMmmebldgGo7cqm7KGeO2D_i3RKi65?usp=sharing">Colab</a>),
+                <small>reference: 8.3.2 [Murphy] and
+                    <a href="https://ruder.io/optimizing-gradient-descent/index.html">this overview by S. Ruder </a>(in
+                    <a href="https://arxiv.org/pdf/1609.04747.pdf"> pdf</a> ) </small>
+            </dd>
+            <dt>Regularization</dt>
+            <dd style="display: none;">
+                <a href="https://www.reirab.com/Teaching/AML23/6-regularization.pdf">slides</a>,
+                <a href="https://github.com/rabbanyk/comp551-notebooks/blob/master/Regularization.ipynb">notebook</a>
+                (<a
+                    href="https://colab.research.google.com/github/rabbanyk/comp551-notebooks/blob/master/Regularization.ipynb">Colab</a>),
+                <small>reference: 3.1.4-3.3 [Bishop] </small>
+            </dd>
+            <dt>Generalization</dt>
+            <dd style="display: none;">
+                <a href="https://www.reirab.com/Teaching/AML23/7-generalization.pdf">slides</a>,
+                notebook for <a href="https://github.com/rabbanyk/comp551-notebooks/blob/master/ModelSelection.ipynb">
+                    model selection (</a><a
+                    href="https://colab.research.google.com/github/rabbanyk/comp551-notebooks/blob/master/ModelSelection.ipynb">Colab</a>),
+                optional notebook for <a
+                    href="https://github.com/rabbanyk/comp551-notebooks/blob/master/CurseOfDimensionality.ipynb"> curse
+                    of dimensionality </a>
+                (<a
+                    href="https://colab.research.google.com/github/rabbanyk/comp551-notebooks/blob/master/CurseOfDimensionality.ipynb">Colab</a>)
+            </dd>
+
+            <dt>Perceptrons &amp; multilayer perceptrons</dt>
+            <dd style="display: none;">
+                <a href="https://www.reirab.com/Teaching/AML23/8-mlp.pdf">slides</a>,
+                <a href="https://colab.research.google.com/drive/1Voay7hKjedPlQ1wR5sbqpkav8KeF9Tp8?usp=sharing">Perceptrons
+                    Colab</a>, <a
+                    href="https://playground.tensorflow.org/#activation=tanh&amp;batchSize=10&amp;dataset=circle&amp;regDataset=reg-plane&amp;learningRate=0.03&amp;regularizationRate=0&amp;noise=0&amp;networkShape=4,2&amp;seed=0.50484&amp;showTestData=false&amp;discretize=false&amp;percTrainData=50&amp;x=true&amp;y=true&amp;xTimesY=false&amp;xSquared=false&amp;ySquared=false&amp;cosX=false&amp;sinX=false&amp;cosY=false&amp;sinY=false&amp;collectStats=false&amp;problem=classification&amp;initZero=false&amp;hideText=false">MLP
+                    demo</a>,
+                <small>reference: 4.1.1-4.1.3 + 4.1.7 [Bishop], 6-6.5 + parts of 7 [Goodfellow] </small>
+            </dd>
+            <dt>Gradient computation and automatic differentiation</dt>
+            <dd style="display: none;">
+                <a href="https://www.reirab.com/Teaching/AML23/9-backprop.pdf">slides</a>,
+                <a href="https://github.com/rabbanyk/comp551-notebooks/blob/master/MLP.ipynb">notebook</a>
+                (<a
+                    href="https://colab.research.google.com/github/rabbanyk/comp551-notebooks/blob/master/MLP.ipynb">Colab</a>),
+                <small>reference: 6.5 + 8.2 [Goodfellow], <a href="https://colah.github.io/posts/2015-08-Backprop/">blog
+                        post</a>, <a href="https://losslandscape.com/">visualization</a></small>
+            </dd>
+            <dt>Convolutional neural networks</dt>
+            <dd style="display: none;">
+                <a href="https://www.reirab.com/Teaching/AML23/10-convnets.pdf">slides</a>,
+                <small>reference: 9 [Goodfellow], <a href="https://distill.pub/2017/feature-visualization/">blog
+                        post</a>, <a href="https://arxiv.org/pdf/1603.07285.pdf">optional reading</a> </small>
+            </dd>
+            <dt>Neural Networks for Sequences</dt>
+            <dd style="display: none;">
+                <a href="https://www.reirab.com/Teaching/AML23/11-rnn.pdf">slides</a>,
+                <small>reference: 15 [Murphy'22], <a href="https://arxiv.org/abs/1706.03762">optional reading</a>
+                </small>
+            </dd>
+            <dt>Naive Bayes</dt>
+            <dd style="display: none;">
+                <a href="https://www.reirab.com/Teaching/AML23/12-naivebayes.pdf">slides</a>,
+                <a href="https://github.com/rabbanyk/comp551-notebooks/blob/master/NaiveBayes.ipynb">notebook</a>
+                (<a
+                    href="https://colab.research.google.com/github/rabbanyk/comp551-notebooks/blob/master/NaiveBayes.ipynb">Colab</a>),
+                <small>reference: 3.5-3.5.4 [Murphy]</small>
+            </dd>
+            <dt>Nearest neighbours</dt>
+            <dd style="display: none;">
+                <a href="https://www.reirab.com/Teaching/AML23/13-nearestNeighbours.pdf">slides</a>,
+                <a href="https://github.com/rabbanyk/comp551-notebooks/blob/master/KNN.ipynb">notebook</a> (<a
+                    href="https://colab.research.google.com/github/rabbanyk/comp551-notebooks/blob/master/KNN.ipynb">Colab</a>),
+                <small>reference: chapter 1 [Murphy] </small>
+            </dd>
+            <dt>Classification and regression trees</dt>
+            <dd style="display: none;">
+                <a href="https://www.reirab.com/Teaching/AML23/14-decisionTree.pdf">slides</a>,
+                <a href="https://github.com/rabbanyk/comp551-notebooks/blob/master/DecisionTree.ipynb">notebook</a>
+                (<a
+                    href="https://colab.research.google.com/github/rabbanyk/comp551-notebooks/blob/master/DecisionTree.ipynb">Colab</a>),
+                <small>reference: 16.1-16.2.6 [Murphy], 14.4 [Bishop]</small>
+            </dd>
+            <dt>Linear support vector machines</dt>
+            <dd style="display: none;">
+                <a href="https://www.reirab.com/Teaching/AML23/15-svm.pdf">slides</a>,
+                <a
+                    href="https://github.com/rabbanyk/comp551-notebooks/blob/master/Perceptron_and_LinearSVM.ipynb">notebook</a>
+                (<a
+                    href="https://colab.research.google.com/github/rabbanyk/comp551-notebooks/blob/master/Perceptron_and_LinearSVM.ipynb">Colab</a>),
+                <small>reference:
+                    4.1.1-4.1.3 + 4.1.7 + 7.1-7.1.4 excluding kernels [Bishop]</small>
+            </dd>
+            <dt>Bagging &amp; boosting</dt>
+            <dd style="display: none;">
+                <a href="https://www.reirab.com/Teaching/AML23/16-baggingBoosting.pdf">slides</a>, <a
+                    href="https://github.com/rabbanyk/comp551-notebooks/blob/master/bagging.ipynb">notebook</a>
+                (<a
+                    href="https://colab.research.google.com/github/rabbanyk/comp551-notebooks/blob/master/bagging.ipynb">Colab</a>),
+                <small> reference: 3.2 [Bishop], demos for
+                    <a href="http://www.r2d3.us/visual-intro-to-machine-learning-part-2/">Bias-Variance Tradeoff</a>,
+                    <a href="https://arogozhnikov.github.io/2016/06/24/gradient_boosting_explained.html">Gradient
+                        Boosting explanation</a>, and
+                    <a href="https://arogozhnikov.github.io/2016/07/05/gradient_boosting_playground.html">Interactive
+                        playground</a></small>
+            </dd>
+            <dt>Unsupervised learning</dt>
+            <dd style="display: none;">
+                <a href="https://www.reirab.com/Teaching/AML23/18-clustering.pdf">slides</a>,
+                <a href="https://github.com/rabbanyk/comp551-notebooks/blob/master/KMeansClustering.ipynb"> notebook</a>
+                (<a
+                    href="https://colab.research.google.com/github/rabbanyk/comp551-notebooks/blob/master/KMeansClustering.ipynb">Colab</a>),
+                <small> reference: 25.5 [Murphy] and 9.1 [Bishop],
+                    demos for <a href="https://www.naftaliharris.com/blog/visualizing-k-means-clustering/"> K-Means </a>
+                    and <a href="https://www.naftaliharris.com/blog/visualizing-dbscan-clustering/">DB-SCAN </a>
+                </small>
+            </dd>
+            <!-- <dt>Expectation Maximization</dt><dd></dd> -->
+            <dt>Dimensionality reduction </dt>
+            <dd style="display: none;">
+                <a href="https://www.reirab.com/Teaching/AML23/19-pca.pdf"> slides</a>,
+                <a href="https://github.com/rabbanyk/comp551-notebooks/blob/master/PCA.ipynb">notebook</a>
+                (<a
+                    href="https://colab.research.google.com/github/rabbanyk/comp551-notebooks/blob/master/PCA.ipynb">Colab</a>),
+                <small> reference: 12.2 [Murphy], 12.1 [Bishop], <a href="https://projector.tensorflow.org/"> demo
+                    </a></small>
+            </dd>
+            <!-- <dt>Learning with graphs </dt><dd>
+				<a href="http://www.reirab.com/Teaching/AML23/20-graphs.pdf"> slides</a>, 
+					
+			</dd>
+			</dd>
+			<dt>Frontiers</dt><dd> -->
+
+
+
+
+
+            <!--    <table class="table table-hover table-sm table-striped">
+            <thead>
+              <tr>
+                <th scope="col"> Topic / Slides</th>
+                <th scope="col"> Code </th>
+                <th scope="col"> Reference </th>
+                <th scope="col"> Pointers </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"> <a href="slides/0-syllabus-logistics.pdf">Syllabus</a> and <a href="slides/1-history-and-introduction.pdf">Introduction</a> </th>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="slides/2-nearest-neighbors.pdf"> Nearest Neighbours </a></th>
+                <td> <a href="https://github.com/rabbanyk/comp551-notebooks/blob/master/KNN.ipynb">notebook</a>
+                    (<a href="https://colab.research.google.com/github/mravanba/comp551-notebooks/blob/master/KNN.ipynb"> Colab</a>) </td>
+                <td> chapter 1 [Murphy] </td>
+                <td> </td>
+              </tr>
+              <tr>
+                <th scope="row"> <a href="slides/3-decision-tree.pdf"> Classification and regression trees </a></th>
+                <td><a href="https://github.com/mravanba/comp551-notebooks/blob/master/DecisionTree.ipynb">notebook</a>
+                    (<a href="https://colab.research.google.com/github/mravanba/comp551-notebooks/blob/master/DecisionTree.ipynb"> Colab</a>)</td>
+                <td>16.1-16.2.6 [Murphy], 14.4 [Bishop]</td>
+                <td><a href="http://www.r2d3.us/visual-intro-to-machine-learning-part-1/"> a visual guide </a></td>
+              </tr>
+              <tr>
+                <th scope="row"> <a href="slides/4-some-ml-concepts.pdf"> Some ML concepts </a>  </th>
+                <td>notebook for <a href="https://github.com/mravanba/comp551-notebooks/blob/master/ModelSelection.ipynb"> model selection (<a href="https://colab.research.google.com/github/mravanba/comp551-notebooks/blob/master/ModelSelection.ipynb">Colab</a>)>Colab</a>)>Colab</a>),, notebook for <a href="https://github.com/mravanba/comp551-notebooks/blob/master/CurseOfDimensionality.ipynb"> curse of dimensionality </a>
+                    (<a href="https://colab.research.google.com/github/mravanba/comp551-notebooks/blob/master/CurseOfDimensionality.ipynb">Colab</a>) </td>
+                <td>16.1-16.2.6 [Murphy], 14.4 [Bishop]</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="slides/5-maximum-likelihood-and-Bayesian-reasoning.pdf"> Maximum likelihood and Bayesian Reasoning </a></th>
+                <td><a href="https://github.com/mravanba/comp551-notebooks/blob/master/MLE_BayesianInference.ipynb">notebook</a>
+                    (<a href="https://colab.research.google.com/github/mravanba/comp551-notebooks/blob/master/MLE_BayesianInference.ipynb">Colab</a>)</td>
+                <td>2-2.3 [Bishop], 3-3.5 [Murphy]</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="slides/6-gaussian.pdf"> Multivariate Gaussian </a></th>
+                <td><a href="https://github.com/mravanba/comp551-notebooks/blob/master/Gaussian.ipynb"> notebook</a>
+                    (<a href="https://colab.research.google.com/github/mravanba/comp551-notebooks/blob/master/Gaussian.ipynb">Colab</a>)</td>
+                <td> 2.3-2.3.4 [Bishop]</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="slides/7-naive-bayes.pdf"> Naive Bayes </a></th>
+                <td><a href="https://github.com/mravanba/comp551-notebooks/blob/master/NaiveBayes.ipynb">notebook</a>
+                    (<a href="https://colab.research.google.com/github/mravanba/comp551-notebooks/blob/master/NaiveBayes.ipynb">Colab</a>)</td>
+                <td>3.5-3.5.4 [Murphy]</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="slides/8-clustering.pdf"> Clustering </a></th>
+                <td><a href="https://github.com/mravanba/comp551-notebooks/blob/master/KMeansClustering.ipynb"> notebook</a>
+                    (<a href="https://colab.research.google.com/github/mravanba/comp551-notebooks/blob/master/KMeansClustering.ipynb">Colab</a>)</td>
+                <td>25.5 [Murphy] and 9.1 [Bishop]</td>
+                <td>demos for <a href="https://www.naftaliharris.com/blog/visualizing-k-means-clustering/"> K-Means </a> and <a href="https://www.naftaliharris.com/blog/visualizing-dbscan-clustering/">DB-SCAN </a></td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="slides/9-expectation-maximization.pdf"> Expectation Maximization </a></th>
+                <td><a href="https://github.com/mravanba/comp551-notebooks/blob/master/EMforGaussianMixture.ipynb">notebook</a>
+                    (<a href="https://colab.research.google.com/github/mravanba/comp551-notebooks/blob/master/EMforGaussianMixture.ipynb">Colab</a>)</td>
+                <td> 9.2-9.3.3 [Bishop], 11-11.2.4 [Murphy]</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="slides/10-pca.pdf"> Dimensionality reduction using PCA </a></th>
+                <td><a href="https://github.com/mravanba/comp551-notebooks/blob/master/PCA.ipynb">notebook</a>
+                    (<a href="https://colab.research.google.com/github/mravanba/comp551-notebooks/blob/master/PCA.ipynb">Colab</a>)</td>
+                <td>12.2 [Murphy], 12.1 [Bishop]</td>
+                <td><a href="https://projector.tensorflow.org/"> demo </a></td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="slides/11-linear-regression.pdf"> Linear regression </a></th>
+                <td><a href="https://github.com/mravanba/comp551-notebooks/blob/master/LinearRegression.ipynb">notebook</a>
+                    (<a href="https://colab.research.google.com/github/mravanba/comp551-notebooks/blob/master/LinearRegression.ipynb">Colab</a>)</td>
+                <td>7-7.3.3 [Murphy], 3-3.1.2 [Bishop]</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row"> <a href="slides/12-logistic-regression.pdf"> Logistic and softmax regression </a></th>
+                <td><a href="https://github.com/mravanba/comp551-notebooks/blob/master/LogisticRegression.ipynb">notebook</a>
+                    (<a href="https://colab.research.google.com/github/mravanba/comp551-notebooks/blob/master/LogisticRegression.ipynb">Colab</a>)</td>
+                <td>8.1-8.3.3 [Murphy], 4.1-4.1.3 + 4.3-4.3.3 [Bishop]</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="slides/13-gradient-descent.pdf"> Gradient descent methods </a></th>
+                <td><a href="https://github.com/mravanba/comp551-notebooks/blob/master/GradientDescent.ipynb">notebook</a>
+                    (<a href="https://colab.research.google.com/github/mravanba/comp551-notebooks/blob/master/GradientDescent.ipynb">Colab</a>)</td>
+                <td> 8.3.2 [Murphy] </td>
+                <td> <a href="https://arxiv.org/pdf/1609.04747.pdf"> optional reading </a></td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="slides/14-regularization.pdf"> Regularization </a> </th>
+                <td><a href="https://github.com/mravanba/comp551-notebooks/blob/master/Regularization.ipynb">notebook</a>
+                    (<a href="https://colab.research.google.com/github/mravanba/comp551-notebooks/blob/master/Regularization.ipynb">Colab</a>)</td>
+                <td>3.1.4-3.3 [Bishop] </td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="slides/15-bias-variance.pdf"> Bias-variance decomposition, bagging & random forests </a></th>
+                <td></td>
+                <td>3.2 [Bishop]</td>
+                <td><a href="http://www.r2d3.us/visual-intro-to-machine-learning-part-2/">demo</a>, <a href="https://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf">optional reading</a></td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="slides/16-perceptrons-svm.pdf"> Perceptrons and linear support vector  machines </a></th>
+                <td><a href="https://github.com/mravanba/comp551-notebooks/blob/master/Perceptron_and_LinearSVM.ipynb">notebook</a>
+                    (<a href="https://colab.research.google.com/github/mravanba/comp551-notebooks/blob/master/Perceptron_and_LinearSVM.ipynb">Colab</a>)</td>
+                <td>4.11-4.13 + 4.1.7 + 7.1-7.14 excluding kernels [Bishop]</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="slides/17-mlp.pdf"> Multilayer Perceptrons </a></th>
+                <td></td>
+                <td>6-6.5 + parts of 7 [Goodfellow]</td>
+                <td><a href="https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.50484&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false">demo</a></td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="slides/18-backprop.pdf">  Gradient computation and automatic differentiation </a></th>
+                <td><a href="https://github.com/mravanba/comp551-notebooks/blob/master/MLP.ipynb">notebook</a>
+                    (<a href="https://colab.research.google.com/github/mravanba/comp551-notebooks/blob/master/MLP.ipynb">Colab</a>)</td>
+                <td>6.5 + 8.2 [Goodfellow]</td>
+                <td><a href="https://colah.github.io/posts/2015-08-Backprop/">blog post</a>, <a href="https://losslandscape.com/">visualization</a></td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="slides/19-convnets.pdf"> Convolutional neural networks </a></th>
+                <td></td>
+                <td>9 [Goodfellow]</td>
+                <td> <a href="https://distill.pub/2017/feature-visualization/">blog post</a>, <a href="https://arxiv.org/pdf/1603.07285.pdf">optional reading</a> </td>
+              </tr>
+            </tbody>
+          </table>
+ -->
+        </ul>
+
+        <h3 class="imp">Evaluation</h3>
+        <ul>
+            <!-- Access through MyCourses  -->
+            <!-- <dt>Quizzes [50%] -->
+            <dt><b> Regular Practice Quizzes [10%] </b></dt>
+            <dd style="display: none;">
+                <li>You will find them on MyCourses </li>
+                <li>One quiz per week to check the key topics discussed </li>
+                <!-- <li>To be completed before the start of the next topic</li> -->
+                <!-- <li>Four lectures don't have practice quizzes and instead we have the checkpoint quizzes </li> 
+					<li>From the two subsequent quizzes, the best one will be considered for your final grade </li>
+					<li>Starts from January 13th</li>
+					<li>The first 2 practice quizzes check the prerequisites for the course and have a different setting than the regular practice quizzes. In particular, unlimited attempts are allowed and due date is set to after add/drop instead of the next lecture </li> -->
+                <!-- 					<li>From the 18 graded quizzes,  best scores will be considered, i.e. one quiz can be missed with no penalty </li>
+ --> <!-- <li>Goal of these quizzes is to encourage studying the materials with the same speed as the class since the topics are built on top of each other and it is hard to follow the lectures if falling behind the class. These are designed to make sure the key concepts are understood. The first non-graded quizzes assess the background knowledge required and point you to what concepts might need brushing up.</li> -->
+            </dd>
+            <dt> <b>First Mid-term Exam [15%] </b></dt>
+            <dd style="display: none;">
+                <li>In person, during class on October 6th </li>
+                <li>Closed book, but you can bring 5 pages of your hand written notes</li>
+                <!--on <b>March 22nd</b> </li>
+					<!-- <li>One per month from all the topics discussed up to the date of the quiz</li>
+					<li>Timed to be done in 3 hours, within a 3 days availability period</li>
+					<li class="imp">Mark the due dates: Jan 21-23rd [3%], Feb 12-14th [7%], March 12-14th [10%], April 15-17th [10%]; timing (12:01 am to 11:59 pm)</li> -->
+            </dd>
+            <dt> <b>Second Mid-term Exam [25%] </b></dt>
+            <dd style="display: none;">
+                <li>In person, during class on November 10th </li>
+                <li>Closed book, but you can bring 5 pages of your hand written notes</li>
+                <!--on <b>March 22nd</b> </li>
+					<!-- <li>One per month from all the topics discussed up to the date of the quiz</li>
+					<li>Timed to be done in 3 hours, within a 3 days availability period</li>
+					<li class="imp">Mark the due dates: Jan 21-23rd [3%], Feb 12-14th [7%], March 12-14th [10%], April 15-17th [10%]; timing (12:01 am to 11:59 pm)</li> -->
+            </dd>
+            <dt><b>assignments [50%]</b></dt>
+            <dd style="display: none;">
+                <li>Four programming assignments to be done in groups of three*, <small style="color:#853a31"> *no
+                        exception to this given the grading load on TAs</small> </li>
+                <li>Groups can stay the same between projects, or change</li>
+                <li>All group members receive the same mark unless there are major complains on not contributing,
+                    responding, etc. from group-mates, which will be resolved in a case by case basis. If a significant
+                    difficulty/conflict arises, please send an email to the course email, put 'Group-Issue' in the title
+                </li>
+                <!-- <li class="imp">Tentative due dates: Feb 9th [12%], March 9th [18%], April 14th [20%], April 26th [10% bonus]</li> -->
+                <li>Work submitted for evaluation as part of this course may be checked with text-matching software
+                    within myCourses</li>
+            </dd>
+            <dt class="guid"><b style="color:#853a31">Late submission policy</b></dt>
+            <dd style="display: none;"> All due dates are 11:59 pm in Montreal, unless specified otherwise [e.g. check
+                the due dates for quizzes]. <br>
+                No make-up quizzes will be given. <br>
+                For mini-projects, 2^k% percent will be deducted per k days of delay. <br>
+                If you experience barriers (including a covid related issue) to learning in this course, submitting the
+                projects, etc., please do not hesitate to discuss them with me directly, and please make sure to put
+                "551 special" in the header to make sure I see your email [for general course correspondence, please use
+                the course email: comp551mcgill@gmail.com].
+                As a point of reference, you can reach the Office for Students with Disabilities at 514-398-6009. <br>
+
+            </dd>
+        </ul>
+
+        <h3 class="guid">Academic Integrity</h3>
+        <ul>"McGill University values academic integrity. Therefore, all students must understand the meaning and
+            consequences of cheating, plagiarism and other academic offenses under the Code of Student Conduct and
+            Disciplinary Procedures" (see <a href="https://www.mcgill.ca/students/srr/honest/"> McGill's webpage</a>
+            for more information). (Approved by Senate on 29 January 2003)</ul>
+
+
+
+        <h3 id="onlinecourses"> Online Resources </h3>
+        <ul>
+            <dt>Learning plan </dt>
+            <dd style="display: none;"><a href="https://metacademy.org/browse">metacademy</a></dd>
+            <dt>Video Playlists </dt>
+            <dd style="display: none;">
+                <li><a href="https://statquest.org/video-index/">StatQuest</a></li>
+                <li><a href="https://www.youtube.com/c/Freecodecamp/playlists">FreeCodeCamp</a></li>
+                <li><a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">Essence of linear
+                        algebra</a> and <a
+                        href="https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi"> Neural Networks
+                    </a> by 3Blue1Brown </li>
+                <li><a href="https://www.youtube.com/channel/UCNq3hVyPoJPGzgtFLC-d2aw/videos">Mathematics for ML by
+                        David Rolnick</a></li>
+            </dd>
+            <dt>Courses with Playlist and/or Code</dt>
+            <dd style="display: none;">
+                <li><a href="https://developers.google.com/machine-learning/crash-course/ml-intro">Introduction to
+                        Machine Learning by Google</a></li>
+                <li><a href="https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU"> Machine Learning
+                        by Stanford
+                    </a></li>
+                <li><a href="https://www.youtube.com/playlist?list=PLZSO_6-bSqHQHBCoGaObUljoXAyyqhpFW">Deep Learning by
+                        UC Berkeley</a></li>
+                <li><a href="https://www.youtube.com/playlist?list=PLoRl3Ht4JOcdU872GhiYWf6jwrk_SNhz9">Hinton's Lectures
+                        on Neural Networks for Machine Learning</a></li>
+                <li> <a href="https://www.fast.ai/">Deep Learning &amp; Linear Algebra courses by fastai</a></li>
+                <li> <a href="https://work.caltech.edu/lectures.html#lectures">Learning from Data by Caltech</a></li>
+                <li>Deep Learning (with PyTorch) <a
+                        href="https://www.youtube.com/playlist?list=PLLHTzKZzVU9eaEyErdV26ikyolxOsz6mq"> playlist </a>
+                    and <a href="https://atcold.github.io/pytorch-Deep-Learning/">course</a> by NYU</li>
+                <li><a href="https://cs230.stanford.edu/lecture/">Deep Learning by Stanford</a></li>
+                <li> <a href="https://www.deeplearning.ai/deep-learning-specialization/">Deep Learning by
+                        deeplearning.ai</a></li>
+                <li> <a href="http://introtodeeplearning.com/">Introduction to Deep Learning by MIT</a> </li>
+                <li><a href="https://www.youtube.com/playlist?list=PLruBu5BI5n4aFpG32iMbdWoRVAA-Vcso6">
+                        Information Theory, Pattern Recognition, and Neural Networks by David MacKay
+                    </a>
+                </li>
+            </dd>
+            <dt>Books with Code </dt>
+            <dd style="display: none;">
+                <li><a href="https://github.com/probml/pyprobml">Probabilistic Machine Learning: An Introduction by
+                        Kevin Murphy (book 1)</a></li>
+                <li><a href="https://d2l.ai/">Dive into Deep Learning BY by Aston Zhang, Zachary Lipton, Mu Li, and
+                        Alexander J. Smola </a></li>
+                <li><a href="https://github.com/ageron/handson-ml">Machine Learning Notebooks for O'Reilly book Hands-on
+                        Machine Learning with Scikit-Learn and TensorFlow</a></li>
+            </dd>
+            <dt>Similar Courses - Graduate Level </dt>
+            <dd style="display: none;">
+                <li><a
+                        href="https://www.cs.toronto.edu/~rgrosse/courses/csc2515_2019/">https://www.cs.toronto.edu/~rgrosse/courses/csc2515_2019/</a>
+                </li>
+                <li><a
+                        href="https://www.cs.cornell.edu/courses/cs4780/2019fa/">https://www.cs.cornell.edu/courses/cs4780/2019fa/</a>
+                </li>
+            </dd>
+            <dt>Similar Courses - Undergraduate Level </dt>
+            <dd style="display: none;">
+                <li><a
+                        href="https://cs.mcgill.ca/~wlh/comp451/schedule.html">https://cs.mcgill.ca/~wlh/comp451/schedule.html</a>
+                </li>
+                <li><a
+                        href="https://www.cs.toronto.edu/~rgrosse/courses/csc311_f20/">https://www.cs.toronto.edu/~rgrosse/courses/csc311_f20/</a>
+                </li>
+                <li><a
+                        href="https://www.cs.toronto.edu/~rgrosse/courses/csc411_f18/">https://www.cs.toronto.edu/~rgrosse/courses/csc411_f18/</a>
+                </li>
+                <li><a
+                        href="http://cs229.stanford.edu/syllabus-fall2020.html">http://cs229.stanford.edu/syllabus-fall2020.html</a>
+                </li>
+                <li><a href="https://cs230.stanford.edu/lecture/">https://cs230.stanford.edu/lecture/</a></li>
+                <li>Cheatsheets: <a
+                        href="https://stanford.edu/~shervine/teaching/">https://stanford.edu/~shervine/teaching/</a>
+                </li>
+            </dd>
+            <dt>Similar Courses - Last Versions</dt>
+            <dd style="display: none;">
+                <li><a href="https://cs.mcgill.ca/~wlh/comp551/schedule.html">Fall 2019</a></li>
+                <li><a href="https://www.reirab.com/Teaching/AML20/index.html">Winter 2020</a></li>
+                <li><a href="https://www.siamak.page/courses/COMP551F20/index.html">Fall 2020</a></li>
+            </dd>
+        </ul>
+
+
+        <h3 class="guid">FAQ</h3>
+        <ul>
+
+            <li style="color:#b24a3e">Class/waitlist is full, can I still register?</li> Unfortunately you will have to
+            wait for the next semester. As an alternative, consider <a
+                href="https://www.siamak.page/courses/COMP451F22/index.html">Fundamental of Machine Learning Course,
+                Comp 451</a>, and please check the <a
+                href="https://www.reirab.com/Teaching/AML23/index.html#onlinecourses">list of free online courses</a>
+            below.
+            <li style="color:#b24a3e">Who to contact for department approval required for taking the course?</li>
+            Please contact teresa.pian@mcgill.ca.
+            <li style="color:#b24a3e">Do I have the prerequisites to take the course?</li> This course requires strong
+            Python programming skills and basic knowledge of probabilities, [multivariate] calculus and linear algebra.
+            Please check <a href="https://www.reirab.com/Teaching/AML21/551prereq.pdf"><b>this quiz to test if your
+                    background is strong enough for taking the course</b></a>. It can also be used to diagnose where
+            your background might be lacking and be used to self-study before taking the course. Most concepts covered
+            in these questions will be used throughout the course in the slides.
+            <!--li style="color:#b24a3e">Do I need instructor's permission to take this course?</li>
+			It is up to your judgment to see if your background is sufficient. If in doubt, please take the  <a href="http://www.reirab.com/Teaching/AML21/551prereq.pdf">prereq quiz</a> [it is perfectly okay if you need to look up things but you need to follow and be comfortable with the questions after some time investment]. Also check the slides from <a href="http://www.reirab.com/Teaching/AML21/index.html"> the last year</a> and see if you can follow them. There is no need to reach out to me for a permission; please reach out directly to the admins to help you register and cc me, in case you can not register directly and feel confident with your background. -->
+            <li style="color:#b24a3e">How similar is it to the last years?</li>
+            Very similar, please check <a href="https://www.reirab.com/Teaching/AML22/index.html"> last year's
+                websites</a> to get a glimpse of the slides, expectations, etc. We will have an updated version and not
+            exactly the same materials but very similar overall.
+            <li style="color:#b24a3e">Will there be lecture recordings?</li>
+            Yes, but class participation is encouraged and rewarded.
+            <li style="color:#b24a3e">What do I learn in this course?</li>
+            You will learn how the most common machine learning algorithms are designed, how they are implemented, and
+            how to apply them in practice. This course has a heavy theory component, since it is important to understand
+            the inner-workings of the algorithms in order to effectively utilize them in practice.
+            Please check below for more information and note that everything below is tentative.
+
+        </ul>
+
+        <!-- 
+<footer style="width:100%;height:15%"><img src="netlogo.jpg" alt="NetSciLogo" style="width:100%;height:100%;transform:rotate(180deg);opacity:1">
+</footer> -->
+
+    </div>
+</body>
+
+</html>
