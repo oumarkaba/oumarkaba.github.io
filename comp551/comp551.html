@@ -850,11 +850,17 @@
             });
 
             // Per-section toggles
-            $root.on('click', 'h3', function () { $(this).toggleClass('clicked'); });
-            $root.on('click', 'dt', function () {
-                const $dd = $(this).nextAll('dd').first();
-                $dd.toggle();
-                $(this).toggleClass('open', $dd.is(':visible'));
+            $('#main').on('click', 'h3', function () {
+                $(this).toggleClass('clicked'); // CSS controls the h3 + ul visibility
+            });
+
+            $('#main').on('click', 'dt', function () {
+                // Works for both main content (dt + dd) and title block (dt + ul)
+                const $target = $(this).nextAll('dd, ul').first();
+                if ($target.length) {
+                    $target.toggle();
+                    $(this).toggleClass('open', $target.is(':visible'));
+                }
             });
 
             // Buttons (optional, if you include them)
